@@ -6,12 +6,20 @@ html
     link(rel="stylesheet", href="/css/style.css")
   body  
     h1 Video Game Characters
-    .cards 
-      each character in data
-        .card 
-          #{character.properties}
-          h2.card__name #{character.properties.name} | #{character.properties.video_game}
-          p.card__email Age : #{character.properties.age}
 
-      a(href="/") Return to the homepage
+    table
+      thead
+        tr
+          th Name
+          th Video Game
+          th Age
+      tbody
+        each character in data
+          tr
+            td= character.properties.name
+            td= character.properties.video_game
+            td= character.properties.age
+      
+
+      a(href="/update-cobj") Add/Update this table
 

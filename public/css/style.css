@@ -56,3 +56,31 @@ input[type="submit"] {
     padding: .375rem 1rem;
     margin-top: 10px;
 }
+
+table {
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+thead {
+  background-color: #ffcccc;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  border-right : 1px solid white;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  color: #333;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
