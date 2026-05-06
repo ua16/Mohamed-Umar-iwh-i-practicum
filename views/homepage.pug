@@ -1,0 +1,17 @@
+doctype html
+html 
+  head 
+    title HomePage | Integrating With HubSpot I Practicum.
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body  
+    h1 Video Game Characters
+    .cards 
+      each character in data
+        .card 
+          #{character.properties}
+          h2.card__name #{character.properties.name} | #{character.properties.video_game}
+          p.card__email Age : #{character.properties.age}
+
+      a(href="/") Return to the homepage
+

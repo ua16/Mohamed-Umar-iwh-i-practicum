@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Update Custom Object Form | Integrating With HubSpot I Practicum.
+  body
+    h1 Create Video Game Character
+
+    form(method="POST", action="/update-cobj")
+      
+      div
+        label(for="name") Name:
+        input(type="text", name="name", id="name", required)
+
+      div
+        label(for="video_game") Video Game:
+        input(type="text", name="video_game", id="video_game", required)
+
+      div
+        label(for="age") Age:
+        input(type="number", name="age", id="age", min="0", required)
+
+      div
+        button(type="submit") Submit
+
+    a(href="/") Return to the homepage
