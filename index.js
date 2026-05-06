@@ -21,7 +21,7 @@ app.set('views', './views/');
 // * Code for Route 1 goes here
 app.get("/", async (req, res) => {
 
-    const getVideoGameCharacters = 'https://api.hubapi.com/crm/v3/objects/2-229234436';
+    const getVideoGameCharacters = 'https://api.hubapi.com/crm/v3/objects/2-229234436?properties=name,video_game,age';
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
         'Content-Type': 'application/json'
@@ -33,7 +33,9 @@ app.get("/", async (req, res) => {
             { headers }
         );
 
-        res.render("homepage", response.data.results);
+
+        res.render("homepage", { data : response.data.results });
+
     } catch (err) {
         console.error(err);
     }
